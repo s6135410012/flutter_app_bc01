@@ -133,39 +133,136 @@ class _LoginUIState extends State<LoginUI> {
                 ),
                 child: TextField(
                   decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.grey[200],
-                    enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                      width: 1.0,
-                      color: Color(0xFF101276),
-                    )),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                      width: 1.0,
-                      color: Color(0xFF101276),
-                    )),
-                    labelText: 'รหัสผ่าน eiei',
-                    labelStyle: TextStyle(
-                      fontFamily: 'Kanit',
-                      color: Color(0xFF101276),
-                    ),
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    hintText: 'ไม่ต่ำกว่า 6 ตัว',
-                    hintStyle: TextStyle(
-                      fontFamily: 'Kanit',
-                      color: Colors.grey[350],
-                    ),
-                    prefixIcon: Icon(
-                      Icons.lock,
-                      color: Color(0xFF101276),
-                    ),
-                    suffixIcon: Icon(
-                      Icons.visibility_off,
-                      color: Colors.grey,
-                    )
-                  ),
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                        width: 1.0,
+                        color: Color(0xFF101276),
+                      )),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                        width: 1.0,
+                        color: Color(0xFF101276),
+                      )),
+                      labelText: 'รหัสผ่าน eiei',
+                      labelStyle: TextStyle(
+                        fontFamily: 'Kanit',
+                        color: Color(0xFF101276),
+                      ),
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      hintText: 'ไม่ต่ำกว่า 6 ตัว',
+                      hintStyle: TextStyle(
+                        fontFamily: 'Kanit',
+                        color: Colors.grey[350],
+                      ),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Color(0xFF101276),
+                      ),
+                      suffixIcon: Icon(
+                        Icons.visibility_off,
+                        color: Colors.grey,
+                      )),
                   obscureText: true,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerLeft,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'ลงทะเบียน',
+                          style: TextStyle(
+                              fontFamily: 'Kanit', color: Color(0xff101276)),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerRight,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'ลืมรหัสผ่าน',
+                          style: TextStyle(
+                            fontFamily: 'Kanit',
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                ),
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'เข้าใช้งาน',
+                    style: TextStyle(
+                      fontFamily: 'Kanit',
+                      color: Color(0xFF101276),
+                    ),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width,
+                      50.0,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        25.0,
+                      ),
+                    ),
+                    side: BorderSide(
+                      color: Color(0xFF101276),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                  top: 8.0,
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 1.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Text(
+                      '  หรือ  ',
+                      style: TextStyle(
+                        fontFamily: 'Kanit',
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 1.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
